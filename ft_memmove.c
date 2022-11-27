@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romaurel <rxonrgn@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/27 00:40:22 by romaurel          #+#    #+#             */
-/*   Updated: 2022/11/27 00:40:22 by romaurel         ###   ########.fr       */
+/*   Created: 2022/11/27 00:40:36 by romaurel          #+#    #+#             */
+/*   Updated: 2022/11/27 00:40:36 by romaurel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int	c)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	return ((c >= '0' && c <= '9'));
+	char	*d;
+	const char	*s;
+
+	d = (char *) dest;
+	s = (char *) src;
+	while (n--)
+		*d++ = *s++;
+	return (d);
 }
