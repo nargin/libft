@@ -6,7 +6,7 @@
 /*   By: romaurel <rxonrgn@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 00:39:46 by romaurel          #+#    #+#             */
-/*   Updated: 2022/11/27 00:39:46 by romaurel         ###   ########.fr       */
+/*   Updated: 2022/12/03 04:59:09 by romaurel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+
+void	*ft_memchr(const void *mb, int c, size_t size);
 
 #endif
