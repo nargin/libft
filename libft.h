@@ -6,7 +6,7 @@
 /*   By: romaurel <rxonrgn@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 00:39:46 by romaurel          #+#    #+#             */
-/*   Updated: 2022/12/05 07:36:10 by romaurel         ###   ########.fr       */
+/*   Updated: 2022/12/07 19:51:42 by romaurel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 
 char	*ft_itoa(int n);
+
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 
 #endif
