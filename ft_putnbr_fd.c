@@ -6,7 +6,7 @@
 /*   By: rxonrgn <rxonrgn@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 18:52:30 by rxonrgn           #+#    #+#             */
-/*   Updated: 2022/12/09 21:51:40 by rxonrgn          ###   ########.fr       */
+/*   Updated: 2022/12/09 16:55:06 by romaurel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_putnbr_fd(int n, int fd)
 	i = 0;
 	if (n == 0)
 		ft_putchar_fd('0', fd);
-	if (n < 0) 
+	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
 		if (n == -2147483648)
@@ -37,4 +37,4 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	while (--i >= 0)
 		ft_putchar_fd(('0' + number[i]), fd);
-
+}

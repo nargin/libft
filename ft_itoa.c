@@ -6,7 +6,7 @@
 /*   By: romaurel <rxonrgn@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 14:52:45 by romaurel          #+#    #+#             */
-/*   Updated: 2022/12/06 15:38:34 by romaurel         ###   ########.fr       */
+/*   Updated: 2022/12/09 17:06:56 by romaurel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,6 @@ char	*ft_itoa(int n)
 /*
 int	main(void)
 {
-	printf("%s\n", ft_itoa(-2147483647 - 1));
+	printf("%s\n", ft_itoa(-2147483647 -1));
 	return (0);
 }*/
