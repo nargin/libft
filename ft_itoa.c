@@ -6,7 +6,7 @@
 /*   By: romaurel <rxonrgn@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 14:52:45 by romaurel          #+#    #+#             */
-/*   Updated: 2022/12/09 17:06:56 by romaurel         ###   ########.fr       */
+/*   Updated: 2022/12/09 23:04:57 by rxonrgn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,15 @@ static int	mem_c(long n)
 {
 	int	i;
 
-	i = 1;
+	i = 0;
 	if (n < 0)
 	{
 		i++;
 		n = -n;
 	}
-	while (n > 0 || i == 1)
-	{
+	while (n >= 10 && ++i)
 		n /= 10;
-		i++;
-	}
-	return (i);
+	return (i + 1);
 }
 
 char	*ft_itoa(int n)
@@ -37,25 +34,19 @@ char	*ft_itoa(int n)
 	long	nn;
 
 	nn = n;
-	nx = malloc(mem_c(nn) * sizeof(char));
+	i = mem_c(nn);
+	nx = malloc((i + 1) * sizeof(char));
 	if (!nx)
 		return (0);
-	i = mem_c(nn);
-	nx[--i] = 0;
+	nx[i--] = '\0';
 	if (nn < 0)
 		nn = -nn;
 	while (i >= 0)
 	{
-		nx[--i] = (nn % 10) + 48;
+		nx[i--] = (nn % 10) + 48;
 		nn /= 10;
-		if (i == 0 && n < 0)
-			nx[i] = '-';
 	}
+	if (n < 0)
+		nx[0] = '-';
 	return (nx);
 }
-/*
-int	main(void)
-{
-	printf("%s\n", ft_itoa(-2147483647 -1));
-	return (0);
-}*/
