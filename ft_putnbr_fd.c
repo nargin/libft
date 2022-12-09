@@ -6,7 +6,7 @@
 /*   By: rxonrgn <rxonrgn@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 18:52:30 by rxonrgn           #+#    #+#             */
-/*   Updated: 2022/12/09 19:05:50 by rxonrgn          ###   ########.fr       */
+/*   Updated: 2022/12/09 21:51:40 by rxonrgn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	ft_putnbr_fd(int n, int fd)
 		number[i++] = n % 10;
 		n /= 10;
 	}
-	i--;
-	while (i >= 0)
-		ft_putchar_fd(('0' + number[i--]), fd);
-}
+	while (--i >= 0)
+		ft_putchar_fd(('0' + number[i]), fd);
+
