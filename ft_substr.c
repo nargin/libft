@@ -6,12 +6,12 @@
 /*   By: romaurel <rxonrgn@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 13:55:18 by romaurel          #+#    #+#             */
-/*   Updated: 2022/12/05 07:36:38 by romaurel         ###   ########.fr       */
+/*   Updated: 2022/12/09 16:51:33 by rxonrgn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*n;
@@ -28,4 +28,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		n[i++] = s[start++];
 	n[i] = 0;
 	return (n);
-}*/
+}
