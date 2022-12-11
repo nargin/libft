@@ -6,7 +6,7 @@
 /*   By: romaurel <rxonrgn@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 05:44:51 by romaurel          #+#    #+#             */
-/*   Updated: 2022/12/05 11:08:15 by romaurel         ###   ########.fr       */
+/*   Updated: 2022/12/11 22:16:42 by romaurel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,19 +48,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!set)
 		return ((char *)s1);
-	else if (count_mem(s1, set) == ft_strlen(s1) || !*s1)
+	if (count_mem(s1, set) == ft_strlen(s1) || !s1)
 		return (ft_strdup(""));
 	i = 0;
 	l = 0;
 	n = malloc(((ft_strlen(s1) - count_mem(s1, set)) + 1) * sizeof(char));
-	if (n)
-	{
-		while (is_set(s1[i], set) && s1[i])
-			i++;
-		while (l < ft_strlen(s1) - count_mem(s1, set) && s1[i])
-			n[l++] = s1[i++];
-		n[l] = 0;
-		return (n);
-	}
-	return (0);
+	if (!n)
+		return (NULL);
+	while (is_set(s1[i], set) && s1[i])
+		i++;
+	while (l < ft_strlen(s1) - count_mem(s1, set) && s1[i])
+		n[l++] = s1[i++];
+	n[l] = 0;
+	return (n);
 }
