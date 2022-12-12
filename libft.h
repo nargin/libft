@@ -6,7 +6,7 @@
 /*   By: romaurel <rxonrgn@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 00:39:46 by romaurel          #+#    #+#             */
-/*   Updated: 2022/12/12 12:25:19 by romaurel         ###   ########.fr       */
+/*   Updated: 2022/12/12 12:39:01 by romaurel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+
+typedef struct s_list {
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 void	*ft_memset(void *s, int c, size_t n);
 
