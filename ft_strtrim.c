@@ -6,7 +6,7 @@
 /*   By: romaurel <rxonrgn@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 05:44:51 by romaurel          #+#    #+#             */
-/*   Updated: 2022/12/11 22:16:42 by romaurel         ###   ########.fr       */
+/*   Updated: 2022/12/12 11:34:25 by romaurel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,9 @@ static size_t	count_mem(char const *s1, const char *set)
 	while (is_set(s1[++i], set) && s1[i])
 		f++;
 	i = ft_strlen(s1);
-	if (f == i)
-		return (0);
-	while (is_set(s1[--i], set) && i > 0)
-		f++;
+	if (f != i)//return (0);
+		while (is_set(s1[--i], set) && i > 0)
+			f++;
 	return (f);
 }
 
