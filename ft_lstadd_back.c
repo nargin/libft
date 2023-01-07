@@ -6,7 +6,7 @@
 /*   By: romaurel <rxonrgn@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 17:32:29 by romaurel          #+#    #+#             */
-/*   Updated: 2023/01/07 17:32:29 by romaurel         ###   ########.fr       */
+/*   Updated: 2023/01/07 20:37:53 by romaurel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
+	t_list	*p;
+
 	if (!new)
 		return ;
 	if (!*lst)
@@ -21,7 +23,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	while (*lst->next)
-		*lst = *lst->next;
-	*lst->next = new;
+	p = *lst;
+	while (p->next)
+		p = p->next;
+	p->next = new;
 }
