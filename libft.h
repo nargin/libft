@@ -6,7 +6,7 @@
 /*   By: romaurel <rxonrgn@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 00:39:46 by romaurel          #+#    #+#             */
-/*   Updated: 2023/01/07 21:12:16 by romaurel         ###   ########.fr       */
+/*   Updated: 2023/01/08 01:33:43 by romaurel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,5 +104,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
 void	ft_lstclear(t_list **lst, void (*del)(void *));
+
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
